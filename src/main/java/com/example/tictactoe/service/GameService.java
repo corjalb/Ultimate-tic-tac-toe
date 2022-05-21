@@ -62,6 +62,9 @@ public class GameService {
         if(game.getStatus() == GameStatus.FINISHED) {
             throw new InvalidGame("Game is already finished");
         }
+        if(game.getPlayer2() == null) {
+            throw new InvalidGame("Player 2 has not joined yet");
+        }
         List<SubGame> board = game.getBoard();
         SubGame subGame = board.get(gamePlay.getSubBoardNumber());
         int[][] subBoard = board.get(gamePlay.getSubBoardNumber()).getSubBoard();
