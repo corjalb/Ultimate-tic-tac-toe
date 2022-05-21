@@ -43,6 +43,19 @@ function create_game() {
                 console.log(error);
             }
         })
+        $.ajax({
+            url: url + "/game/gameBoard",
+            type: 'GET',
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({}),
+            success: function(data) {
+                alert("Waiting for next player");
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        })
     }
 
 }
