@@ -44,12 +44,12 @@ public class GameController {
 
     }
 
-    @GetMapping("/")
+    /*@GetMapping("/")
     public String login() {
         return "index";
-    }
+    }*/
 
-    @GetMapping("/gameBoard")
+    @GetMapping("/game-board")
     public String gameBoard() {
         return "game";
     }

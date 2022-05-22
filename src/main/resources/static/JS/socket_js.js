@@ -44,7 +44,7 @@ function create_game() {
             }
         })
         $.ajax({
-            url: url + "/game/gameBoard",
+            url: url + "/game/game-board",
             type: 'GET',
             dataType: "json",
             contentType: "application/json",
