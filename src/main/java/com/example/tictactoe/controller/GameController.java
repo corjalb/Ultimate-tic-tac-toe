@@ -44,13 +44,6 @@ public class GameController {
 
     }
 
-    /*@GetMapping("/")
-    public String login() {
-        return "index";
-    }*/
 
-    @GetMapping("/game-board")
-    public String gameBoard() {
-        return "game";
-    }
+
 }

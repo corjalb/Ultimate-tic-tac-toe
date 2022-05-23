@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+<div class="text-center"id="box">
+    <header>
+        <h1>Ultimate Tic Tac Toe</h1>
+    </header>
+    <div id="UIButtons">
+      <input id="login" placeholder="login here">
+      <button onclick="create_game()">Create a new game</button>
+      <button onclick="connectToRandom()">Connect to a random game</button>
+      <input id="game_id" placeholder="paste game ID">
+      <button onclick="connectToSpecific()">Connect by game ID</button>
+      <div id="message"></div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.0/sockjs.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" charset="utf-8"></script>
+<script src="JS/script.js" charset="utf-8"></script>
+<script src="JS/socket_js.js"></script>

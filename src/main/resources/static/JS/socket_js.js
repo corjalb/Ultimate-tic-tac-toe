@@ -23,6 +23,7 @@ function create_game() {
     if(login == null || login === "") {
         alert("please enter a login");
     } else {
+        $('#UIButtons').load(url + "/game-board");
         $.ajax({
             url: url + "/game/start",
             type: 'POST',
@@ -43,19 +44,7 @@ function create_game() {
                 console.log(error);
             }
         })
-        $.ajax({
-            url: url + "/game/game-board",
-            type: 'GET',
-            dataType: "json",
-            contentType: "application/json",
-            data: JSON.stringify({}),
-            success: function(data) {
-                alert("Waiting for next player");
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        })
+        
     }
 
 }
@@ -65,7 +54,7 @@ function connectToRandom() {
     if(login == null || login === "") {
         alert("please enter a login");
     } else {
-
+        $('#UIButtons').load(url + "/game-board");
         $.ajax({
             url: url + "/game/connect/random",
             type: 'POST',
@@ -98,7 +87,7 @@ function connectToSpecific() {
         if(gameId == null || gameId === "") {
             alert("Need to enter a game Id");
         }
-
+        $('#UIButtons').load(url + "/game-board");
         $.ajax({
             url: url + "/game/connect",
             type: 'POST',
